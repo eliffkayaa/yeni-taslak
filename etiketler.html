@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section, article ve div Arasındaki Fark | Elif'in Blogu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
+            <div class="menu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="ybs.html">YBS</a>
+    <a href="yazilar.html">Yazılar</a>
+    <a href="hakkimda.html">Ben Kimim?</a>
+</div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="yazi">
+            <p class="etiket">HTML • ÖĞRENME NOTLARI</p>
+            <h1>section, article ve div: Hangisini ne zaman kullanırım?</h1>
+            <p class="ozet">Bu üç etiket içerikleri gruplamak için kullanılır. Ben de sayfamı düzenlerken aralarındaki farkı karıştırdım. Kendi blogumdan örneklerle öğrendiklerimi anlatıyorum.</p>
+
+            <h2>Önce kısa cevap</h2>
+            <p><code>section</code>, aynı konuyla ilgili içerikleri bir başlık altında toplar. <code>article</code>, kendi başına anlamlı ve başka yerde de paylaşılabilecek bir içeriği temsil eder. <code>div</code> ise özel bir anlam taşımayan, çoğunlukla CSS ile düzenlemek için kullanılan genel bir kapsayıcıdır.</p>
+
+            <h2>section: aynı konudaki içerikleri gruplamak</h2>
+            <p>Ana sayfamda “Son yazılar” başlığı ve yazı kartları bir konu etrafında toplanıyor. Bu nedenle bunları bir <code>section</code> içinde tutabilirim. Bölümün ne hakkında olduğunu başlığı açıklar.</p>
+            <div class="kod-ornek">
+            <pre><code>&lt;section class="son-yazilar"&gt;
+  &lt;h2&gt;Yeni öğrendiklerim&lt;/h2&gt;
+  &lt;!-- Bu konuyla ilgili yazı kartları --&gt;
+&lt;/section&gt;</code></pre>
+            <div class="kod-onizleme">
+                <span class="onizleme-baslik">SAYFADA BÖYLE GÖRÜNÜR</span>
+                <section class="ornek-section">
+                    <span class="ornek-etiket">SON YAZILAR</span>
+                    <strong>Yeni öğrendiklerim</strong>
+                    <div class="ornek-yazi-karti"><b>HTML</b><span>Section, article ve div</span></div>
+                </section>
+            </div>
+            </div>
+            <p>Bir sayfayı yalnızca stil vermek için bölüyorsam, oraya anlamlı bir başlık koyamıyorsam <code>section</code> seçmek yerine <code>div</code> daha uygun olabilir.</p>
+
+            <h2>article: tek başına da anlamlı içerik</h2>
+            <p>Yazılar listemdeki her kart tek bir yazıyı tanıtıyor. Kartın başlığı, özeti ve bağlantısı başka bir sayfaya taşınsa da anlamını korur. Bu yüzden her yazı kartı için <code>article</code> kullanmak mantıklıdır. Yazının tam içeriği de kendi sayfamda bir <code>article</code> içindedir.</p>
+            <div class="kod-ornek">
+            <pre><code>&lt;article class="yazi-karti"&gt;
+  &lt;h2&gt;section, article ve div arasındaki fark&lt;/h2&gt;
+  &lt;p&gt;Kendi kodlarımdan örneklerle öğrendiklerim.&lt;/p&gt;
+  &lt;a href="etiketler.html"&gt;Yazıyı oku&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+            <div class="kod-onizleme">
+                <span class="onizleme-baslik">SAYFADA BÖYLE GÖRÜNÜR</span>
+                <article class="ornek-yazi-karti buyuk-ornek-kart">
+                    <span class="ornek-etiket">HTML • ÖĞRENME NOTLARI</span>
+                    <strong>section, article ve div arasındaki fark</strong>
+                    <span>Kendi kodlarımdan örneklerle öğrendiklerim.</span>
+                    <b class="ornek-link">Yazıyı oku →</b>
+                </article>
+            </div>
+            </div>
+            <p>Blog yazısı, haber veya bağımsız bir gönderi <code>article</code> için uygun örneklerdir. Her kutunun ya da kartın otomatik olarak <code>article</code> olması gerekmez; içeriğin kendi başına anlamlı olup olmadığına bakarım.</p>
+
+            <h2>div: özel anlamı olmayan kapsayıcı</h2>
+            <p><code>div</code>, birkaç HTML öğesini tek bir grup içinde toplar. Kendisi, içindeki grubun ne hakkında olduğunu söylemez. Tarayıcıya veya yardımcı teknolojilere “burası menü”, “burası yazı” ya da “burası bölüm” anlamı vermez. Yani <code>div</code> kullanmak tek başına içeriği anlamlandırmaz.</p>
+            <p>Genellikle gruba CSS ile düzen uygulamak veya JavaScript ile birlikte seçmek istediğimde <code>div</code> kullanırım. Örneğin blogumun proje vitrini açıklama ve önizleme olarak iki parçadan oluşuyor; bu parçaları yan yana yerleştirmek için bir kapsayıcı kullanabilirim:</p>
+            <div class="kod-ornek">
+            <pre><code>&lt;div class="proje-vitrin"&gt;
+  &lt;div class="proje-aciklama"&gt;
+    &lt;h2&gt;Kendi blogumu tasarlıyorum&lt;/h2&gt;
+    &lt;p&gt;Bu siteyi HTML ve CSS ile hazırlıyorum.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="proje-onizleme"&gt;
+    &lt;!-- Sitenin görsel önizlemesi --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <div class="kod-onizleme">
+                <span class="onizleme-baslik">SAYFADA BÖYLE GÖRÜNÜR</span>
+                <div class="ornek-vitrin">
+                    <div><span class="ornek-etiket">ÖNE ÇIKAN PROJE</span><strong>Kendi blogumu tasarlıyorum</strong><span>HTML ve CSS ile hazırladığım kişisel blog.</span></div>
+                    <div class="ornek-ekran"><i></i><i></i><i></i><span>Blog önizlemesi</span></div>
+                </div>
+            </div>
+            </div>
+            <p>Buradaki <code>div</code> öğeleri içerik türünü tarif etmiyor; CSS sınıflarıyla parçaları düzenlememi sağlıyor. Ama amaca uygun bir HTML etiketi varsa önce onu düşünürüm. Örneğin menü bağlantıları için <code>div class="menu"</code> yerine <code>&lt;nav class="menu"&gt;</code> kullanmak daha açıklayıcıdır; çünkü <code>nav</code> bu bağlantıların gezinme alanı olduğunu belirtir. Kısacası <code>div</code> yanlış veya gereksiz değildir; anlamlı bir etiketin karşılamadığı gruplama ve düzenleme ihtiyacında kullanılır.</p>
+
+            <h2>Aklımda tutmak için</h2>
+            <ul>
+                <li>Bir konu başlığı altında ilişkili içerikler mi? <code>section</code>.</li>
+                <li>Kendi başına da anlaşılabilen bağımsız bir içerik mi? <code>article</code>.</li>
+                <li>Yalnızca gruplamak veya CSS ile düzenlemek mi gerekiyor? <code>div</code>.</li>
+            </ul>
+            <p>Bu etiketleri seçerken artık sadece görünüşe değil, içeriğin ne anlattığına da bakıyorum. Sayfamdaki her bölüm için bu soruyu sormak kodumu daha anlaşılır hale getiriyor.</p>
+
+            <h2>Kaynaklar</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank" rel="noopener noreferrer">MDN: section</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank" rel="noopener noreferrer">MDN: article</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank" rel="noopener noreferrer">MDN: div</a></li>
+            </ul>
+            <div class="geri-don">
+                <a href="yazilar.html">← Yazılar listesine dön</a>
+                <a href="index.html">Ana sayfaya dön</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Elif'in Blogu</p>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p>Instagram: <a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer">@kyaelffff</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer">Elif Kaya</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+

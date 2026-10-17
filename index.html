@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -9,30 +9,26 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
         <nav>
-            <h2>Elif'in Blogu</h2>
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
 
             <div class="menu">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="hakkimda.html">Ben Kimim?</a>
-                <a href="yazilar.html">Yazılar</a>
-            </div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="ybs.html">YBS</a>
+    <a href="yazilar.html">Yazılar</a>
+    <a href="hakkimda.html">Ben Kimim?</a>
+</div>
         </nav>
     </header>
-
-
     <main>
 
         <!-- Giriş bölümü -->
 
         <section class="hero">
-
             <p class="etiket">MERHABA 👋</p>
-
             <h1>
                 Yazılım ve yönetim bilişim <br>
                 serüvenim
@@ -68,61 +64,114 @@
 
         </section>
 
+        <section class="proje-vitrin" id="projeler">
+            <div class="proje-aciklama">
+                <p class="etiket">ÖNE ÇIKAN PROJE</p>
+                <h2>Kendi blogumu tasarlıyorum</h2>
+                <p>YBS'de öğrendiklerimi, yazılım yolculuğumu ve alan seçme sürecimi paylaştığım bu siteyi HTML ve CSS ile hazırlıyorum.</p>
+                <div class="proje-etiketleri" aria-label="Kullanılan teknolojiler">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Web tasarımı</span>
+                </div>
+                <p class="proje-notu"><strong>Bu projede:</strong> Sayfa düzeni kurmayı, menü ve kart tasarlamayı öğreniyorum.</p>
+                <a class="buton" href="ybs.html">YBS sayfamı keşfet →</a>
+            </div>
 
-        
-
-        <section class="one-cikan">
-
-            <p class="etiket">ÖNE ÇIKAN YAZI</p>
-
-            <h2>HTML ile Bir Sayfanın İskeletini Kurmak</h2>
-
-            <p>
-                HTML kullanarak bir web sayfasının temel yapısını
-                nasıl oluşturduğumu anlattığım yazı.
-            </p>
-
-            <a href="yazi2.html">Yazıyı oku →</a>
-
+            <div class="proje-onizleme" aria-label="Blog sitesinin temsili önizlemesi">
+                <div class="onizleme-ust">
+                    <span></span><span></span><span></span>
+                    <p>elifinblogu.com</p>
+                </div>
+                <div class="onizleme-icerik">
+                    <p class="onizleme-etiket">ÖĞRENİYORUM, ÜRETİYORUM</p>
+                    <h3>Yazılım ve YBS yolculuğum</h3>
+                    <p>Yeni öğrendiklerimi adım adım paylaşıyorum.</p>
+                    <div class="onizleme-kartlar">
+                        <div><span>01</span><strong>Yazılarım</strong></div>
+                        <div><span>02</span><strong>YBS</strong></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
+        
         <!-- Son yazılar -->
 
         <section class="son-yazilar">
 
             <p class="etiket">SON YAZILAR</p>
 
-            <h2>Yeni öğrendiklerim</h2>
-
             <div class="kartlar">
 
                 <article class="kart">
 
-                    <p>HTML</p>
+                    <div class="kart-kapak" aria-hidden="true">
+                        <div class="kod-penceresi">
+                            <div class="kod-pencere-noktalar"><i></i><i></i><i></i><span>index.html</span></div>
+                            <div class="kod-satiri"><b>1</b><code><em>&lt;html</em> lang=<strong>"tr"</strong><em>&gt;</em></code></div>
+                            <div class="kod-satiri"><b>2</b><code>&nbsp;&nbsp;<em>&lt;body&gt;</em></code></div>
+                            <div class="kod-satiri"><b>3</b><code>&nbsp;&nbsp;&nbsp;&nbsp;<mark>Merhaba, dünya!</mark></code></div>
+                            <div class="kod-satiri"><b>4</b><code>&nbsp;&nbsp;<em>&lt;/body&gt;</em></code></div>
+                            <div class="kod-satiri"><b>5</b><code><em>&lt;/html&gt;</em></code></div>
+                        </div>
+                    </div>
 
-                    <h3>
-                        HTML ile Bir Sayfanın İskeletini Kurmak
-                    </h3>
+                    <div class="kart-icerik">
+                        <p class="kart-etiket"><strong>HTML</strong></p>
 
-                    <a href="yazi2.html">Oku →</a>
+                        <h3>
+                            HTML ile Bir Sayfanın İskeletini Kurmak
+                        </h3>
+
+                        <a href="yazi2.html">Oku →</a>
+                    </div>
 
                 </article>
             </div>
 
         </section>
-        <section>
-            <h2>Günün Sonu Nottları</h2>
-            <br>
-            <h3>Öğrendiğim bir HTML etiketi</h3>
-            <p>&lt; section clss="hero"&gt ; etiketi, web sayfasının giriş bölümünü oluşturmak için kullanılabilir.Bu bölümde genellikle başlık, kısa bir açıklama ve bir buton bulunur.  </p>
+        <section class="son-yazilar gun-sonu">
+            <div class="gun-notu-baslik">
+                <div>
+                    <p class="etiket">GÜNÜN SONU NOTLARI</p>
+                    <h2>Bugün aklımda kalan</h2>
+                </div>
+                <span class="not-tarih">HTML ÖĞRENME GÜNLÜĞÜ</span>
+            </div>
+
+            <article class="gun-notu-karti">
+                <div class="not-simge" aria-hidden="true">&lt;/&gt;</div>
+                <div class="not-icerik">
+                    <p class="not-konu">BUGÜNÜN KÜÇÜK KEŞFİ</p>
+                    <h3>Her kapsayıcı aynı şeyi anlatmıyor.</h3>
+                    <p><code>section</code> ilişkili içerikleri bir başlık altında toplar, <code>article</code> kendi başına anlamlı bir içeriği taşır. <code>div</code> ise özel bir anlam eklemeden öğeleri gruplar.</p>
+                    <a href="etiketler.html">Örneklerle yazıyı oku <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="not-mini-ornek" aria-label="Bugünkü notun kısa özeti">
+                    <span>İÇERİĞİ TANIMLA</span>
+                    <b>section</b>
+                    <b>article</b>
+                    <b>div</b>
+                </div>
+            </article>
+        </section>
 
     </main>
 
 
     <footer>
         <p>© 2026 Elif'in Blogu</p>
-        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>    </footer>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p><a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@kyaelffff</strong></a></p>
+        <p><a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Elif Kaya</strong></a></p>
+    </footer>
 
 </body>
 </html>
+
+
+
+
+

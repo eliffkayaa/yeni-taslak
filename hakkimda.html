@@ -1,108 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ben Kimim? | Elif'in Blogu</title>
-
-    <link rel="stylesheet" href="style.css"> pus
-
+    <title>Hakkımda | Elif'in Blogu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
+<body class="hakkimda-body">
     <header>
         <nav>
-
-            <h2>Elif'in Blogu</h2>
-
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
             <div class="menu">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="hakkimda.html">Ben Kimim?</a>
-                <a href="yazilar.html">Yazılar</a>
-            </div>
-
+    <a href="index.html">Ana Sayfa</a>
+    <a href="ybs.html">YBS</a>
+    <a href="yazilar.html">Yazılar</a>
+    <a href="hakkimda.html">Ben Kimim?</a>
+</div>
         </nav>
     </header>
 
-
-    <main>
-
-        <section class="sayfa-baslik">
-
-            <p class="etiket">HAKKIMDA</p>
-
-            <h1>Ben Kimim?</h1>
-
-            <p>
-                Biraz kendimden ve öğrenme yolculuğumdan bahsedelim.
-            </p>
-
+    <main class="hakkimda-sayfasi">
+        <section class="hakkimda-hero" aria-labelledby="hakkimda-baslik">
+            <img class="hakkimda-portre" src="WhatsApp Image 2026-10-14 at 15.20.59.jpeg" alt="Elif Kaya'nın portre fotoğrafı">
+            <div class="hakkimda-tanitim">
+                <p class="hakkimda-ust-etiket">BLOGUMA HOŞ GELDİNİZ 🌸</p>
+                <h1 id="hakkimda-baslik">Merhaba! 👋</h1>
+                <p class="hakkimda-ozet">Merhaba, ben Elif Kaya. Aydın Adnan Menderes Üniversitesi Yönetim Bilişim Sistemleri 2. sınıf öğrencisiyim. Kendimi yazılım alanında geliştirmeye ve bana hitap eden alanı bulmaya çalışıyorum. Web sayfamı oluşturarak bu sürecimi sizlerle paylaşmak, aynı zamanda web tasarımının bana uygun olup olmadığına karar vermek istiyorum.</p>
+                <div class="hakkimda-eylemler">
+                    <a class="buton" href="#iletisim">Benimle iletişime geç <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </section>
 
-
-        <section class="hakkimda">
-
-            <article>
-
-                <h2>Merhaba! 👋</h2>
-
-                <p>
-                    Ben Elif. Yönetim Bilişim Sistemleri 2.sınıf öğrencisiyim.Kendimi yazılım alanında geliştirmeye ve bana hitap eden alanı bulmaya çalışıyorum. Web sayfası tasarlayarak bu alanın bana göre olup olmadığına bakıyorum.                     
-                </p>
-
-            </article>
-
-
-            <article>
-
+        <section class="hakkimda-kartlar" aria-label="Hakkımda detayları">
+            <article class="hakkimda-bilgi-karti">
+                <span class="hakkimda-ikon" aria-hidden="true">✦</span>
                 <h2>İlgi Alanlarım</h2>
-
-                <ul>
-                    <li>Web geliştirme</li>
-                    <li>Programlama</li>
-                    <li>ERP danışmanlığı</li>
-                    <li>HTML ve CSS</li>
-                    <li>Teknoloji</li>
+                <ul class="ilgi-etiketleri">
+                    <li>HTML</li><li>CSS</li><li>Python</li>
+                    <li>Web geliştirme</li><li>Sistem analizi</li><li>Programlama</li><li>Teknoloji</li>
                 </ul>
-
             </article>
 
-
-            <article>
-
+            <article class="hakkimda-bilgi-karti">
+                <span class="hakkimda-ikon" aria-hidden="true">↗</span>
                 <h2>Öğrenme Hedeflerim</h2>
-
-                <p>
-                    Öncelikle HTML ve CSS temelimi güçlendirmek,
-                    daha sonra JavaScript ve Python öğrenerek
-                    kendi projelerimi geliştirmek istiyorum.
-                </p>
-
+                <p>HTML ve CSS temellerimi sağlamlaştırıp JavaScript ve Python ile projeler geliştirmek; sistem analizi alanını daha yakından tanımak istiyorum.</p>
             </article>
 
-
-            <article>
-
+            <article class="hakkimda-bilgi-karti">
+                <span class="hakkimda-ikon" aria-hidden="true">⌘</span>
                 <h2>Bu Blogun Amacı</h2>
-
-                <p>
-                    Alan seçme sürecimde izlediğim adımları buraya not alıp kendi sürecimi düzenli bir şekilde takip etmek ve web tasarım alanında kendimi geliştirmek.
-                </p>
-
+                <p>Öğrendiklerimi not ederek gelişimimi takip etmek, deneyimlerimi paylaşmak ve bana en uygun teknoloji alanını keşfetmek.</p>
             </article>
 
+           m <article class="hakkimda-bilgi-karti hakkimda-iletisim-karti" id="iletisim">
+                <span class="hakkimda-ikon" aria-hidden="true">✉</span>
+                <h2>Bana Ulaşın</h2>
+                <p>Güncel çalışmalarımı ve paylaşımlarımı sosyal medya hesaplarımda bulabilirsiniz.</p>
+                <div class="hakkimda-sosyal-linkler">
+                    <a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer">
+                        <span>Instagram</span><strong>@kyaelffff</strong><span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer">
+                        <span>LinkedIn</span><strong>Elif Kaya</strong><span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
         </section>
-
     </main>
-
 
     <footer>
         <p>© 2026 Elif'in Blogu</p>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p><a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@kyaelffff</strong></a></p>
+        <p><a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Elif Kaya</strong></a></p>
     </footer>
-
 </body>
 </html>
+
+
+
+

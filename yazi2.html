@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 
@@ -15,19 +15,28 @@
     <header>
         <nav>
 
-            <h2>Elif'in Blogu</h2>
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
 
             <div class="menu">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="hakkimda.html">Ben Kimim?</a>
-                <a href="yazilar.html">Yazılar</a>
-            </div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="ybs.html">YBS</a>
+    <a href="yazilar.html">Yazılar</a>
+    <a href="hakkimda.html">Ben Kimim?</a>
+</div>
 
         </nav>
     </header>
 
 
-    <main>
+    <main class="yazi-sayfasi">
+
+        <div class="yazi-arkaplan-kodlari" aria-hidden="true">
+            <span>&lt;div&gt;</span><span>&lt;section&gt;</span><span>&lt;header&gt;</span><span>&lt;article&gt;</span>
+            <span>&lt;main&gt;</span><span>&lt;footer&gt;</span><span>&lt;h1&gt;</span><span>&lt;p&gt;</span>
+            <span>&lt;nav&gt;</span><span>&lt;aside&gt;</span><span>&lt;ul&gt;</span><span>&lt;body&gt;</span>
+            <span>display: flex;</span><span>color: #635bff;</span><span>&lt;strong&gt;</span>
+            <span>margin: auto;</span><span>gap: 12px;</span><span>&lt;title&gt;</span>
+        </div>
 
         <article class="yazi">
 
@@ -52,22 +61,18 @@
 
             <h2>Temel HTML yapısı</h2>
 
-            <p>
-                Temel bir HTML belgesinin geçerli sayılması ve tarayıcılar tarafından doğru işlenebilmesi için olmazsa olmaz ana unsurlar vardır </p>
-                <section>
-    <h2>Temel Etiketlerin Görevleri</h2>
-
-    <ul>
-        <li><strong>&lt;!DOCTYPE html&gt;:</strong> HTML5 belgesini belirtir.</li>
-        <li><strong>&lt;html lang="tr"&gt;:</strong> HTML sayfasının ana etiketidir.</li>
-        <li><strong>&lt;head&gt;:</strong> Sayfa bilgilerini içerir.</li>
-        <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Türkçe karakterleri doğru gösterir.</li>
-        <li><strong>&lt;title&gt;:</strong> Tarayıcı sekmesinin başlığını belirler.</li>
-        <li><strong>&lt;body&gt;:</strong> Kullanıcıların gördüğü içerikleri kapsar.</li>
-    </ul>
-</section>
-</article>
-
+            <p>Temel bir HTML belgesinin geçerli sayılması ve tarayıcılar tarafından doğru işlenebilmesi için bazı ana unsurlar gerekir.</p>
+            <section>
+                <h2>Temel Etiketlerin Görevleri</h2>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;:</strong> HTML5 belgesini belirtir.</li>
+                    <li><strong>&lt;html lang="tr"&gt;:</strong> HTML sayfasının ana etiketidir.</li>
+                    <li><strong>&lt;head&gt;:</strong> Sayfa bilgilerini içerir.</li>
+                    <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Türkçe karakterleri doğru gösterir.</li>
+                    <li><strong>&lt;title&gt;:</strong> Tarayıcı sekmesinin başlığını belirler.</li>
+                    <li><strong>&lt;body&gt;:</strong> Kullanıcıların gördüğü içerikleri kapsar.</li>
+                </ul>
+            </section>
 
             <h2>Kendi sitemde nasıl kullandım?</h2>
 
@@ -78,13 +83,11 @@
             <!-- EKRAN GÖRÜNTÜSÜNÜ BURAYA KOYACAĞIZ -->
 
             <div class="ekran-goruntusu">
-                <div class="ekran-goruntusu">
-                    <img src="Ekran görüntüsü.jpeg" alt="Ekran görüntüsü" width="300">
-                </div>
+                <img src="Ekran görüntüsü.jpeg" alt="Blog sayfasının ekran görüntüsü" width="300">
             </div>
 
 
-            <h2>Ben neler kullandım ?</h2>
+            <h2>Ben neler kullandım?</h2>
 
             <p>
                 Sayfanın bölümlerini birbirinden ayırmak ve
@@ -109,9 +112,8 @@
 
             <div class="geri-don">
 
-                <a href="yazilar.html">
-                    ← Yazılara geri dön
-                </a>
+                <a href="yazilar.html">← Yazılar listesine dön</a>
+                <a href="index.html">Ana sayfaya dön</a>
 
             </div>
 
@@ -122,7 +124,16 @@
 
     <footer>
         <p>© 2026 Elif'in Blogu</p>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p>Instagram: <a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer">@kyaelffff</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer">Elif Kaya</a></p>
     </footer>
 
 </body>
 </html>
+
+
+
+
+
+

@@ -9,6 +9,7 @@
     <meta property="og:description" content="İlişkili bölümleri section, bağımsız içeriği article, genel gruplamayı div ile işaretlemeyi örneklerle keşfedin.">
     <meta property="og:image" content="./kod-ornegi.jpeg">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,7 @@
     <a href="ybs.html">YBS</a>
     <a href="yazilar.html" aria-current="page">Yazılar</a>
     <a href="hakkimda.html">Ben Kimim?</a>
+    <button id="theme-toggle" type="button" aria-pressed="false">🌙 Karanlık Mod</button>
 </div>
         </nav>
     </header>
@@ -102,12 +104,14 @@
             </ul>
             <p>Bu etiketleri seçerken artık sadece görünüşe değil, içeriğin ne anlattığına da bakıyorum. Sayfamdaki her bölüm için bu soruyu sormak kodumu daha anlaşılır hale getiriyor.</p>
 
-            <h2>Kaynaklar</h2>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank" rel="noopener noreferrer">MDN: section</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank" rel="noopener noreferrer">MDN: article</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank" rel="noopener noreferrer">MDN: div</a></li>
-            </ul>
+            <section class="yazi-kaynaklar" aria-labelledby="kaynaklar-baslik">
+                <h2 id="kaynaklar-baslik">Kaynaklar</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank" rel="noopener noreferrer">MDN: section</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank" rel="noopener noreferrer">MDN: article</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank" rel="noopener noreferrer">MDN: div</a></li>
+                </ul>
+            </section>
             <div class="geri-don">
                 <a href="yazilar.html">← Yazılar listesine dön</a>
                 <a href="index.html">Ana sayfaya dön</a>
@@ -123,7 +127,5 @@
     </footer>
 </body>
 </html>
-
-
 
 

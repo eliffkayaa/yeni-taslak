@@ -12,6 +12,7 @@
     <meta property="og:image" content="./kod-ornegi.jpeg">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -26,6 +27,7 @@
     <a href="ybs.html">YBS</a>
     <a href="yazilar.html" aria-current="page">Yazılar</a>
     <a href="hakkimda.html">Ben Kimim?</a>
+    <button id="theme-toggle" type="button" aria-pressed="false">🌙 Karanlık Mod</button>
 </div>
 
         </nav>
@@ -106,12 +108,13 @@
             </p>
 
 
-            <h2>Kaynaklar</h2>
-
-            <ul>
-                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-            </ul>
+            <section class="yazi-kaynaklar" aria-labelledby="kaynaklar-baslik">
+                <h2 id="kaynaklar-baslik">Kaynaklar</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                </ul>
+            </section>
 
 
             <div class="geri-don">
@@ -135,9 +138,6 @@
 
 </body>
 </html>
-
-
-
 
 
 

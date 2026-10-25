@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Yazı filtreleme öncesi ve sonrası</title>
+  <desc id="desc">Öncesinde beş yazı kartı, sonrasında CSS ve mobil aramasıyla eşleşen tek yazı kartı gösterilir.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8eff6"/>
+      <stop offset="1" stop-color="#eee5f3"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#81549d"/>
+      <stop offset="1" stop-color="#542b72"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#39244a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="690" rx="28" fill="url(#bg)"/>
+  <text x="600" y="45" fill="#382a40" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">BLOG YAZILARINDA FİLTRE VE ARAMA</text>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="70" width="555" height="590" rx="22" fill="#fff" stroke="#ddcce6" stroke-width="2"/>
+    <rect x="615" y="70" width="555" height="590" rx="22" fill="#fff" stroke="#c9add9" stroke-width="2"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="91" width="150" height="38" rx="19" fill="#eee3f4"/>
+    <text x="130" y="116" fill="#542b72" font-size="17" font-weight="700" text-anchor="middle">ÖNCESİ</text>
+    <text x="55" y="158" fill="#382a40" font-size="20" font-weight="700">Yazılarım</text>
+    <rect x="55" y="173" width="505" height="42" rx="12" fill="#fff" stroke="#ddcce6" stroke-width="2"/>
+    <text x="74" y="200" fill="#8d8192" font-size="15">Yazıları ara...</text>
+
+    <rect x="55" y="229" width="86" height="34" rx="17" fill="#654080"/>
+    <text x="98" y="251" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Tümü</text>
+    <rect x="151" y="229" width="86" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="194" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">HTML</text>
+    <rect x="247" y="229" width="78" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="286" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">CSS</text>
+    <rect x="335" y="229" width="128" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="399" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">JavaScript</text>
+
+    <g fill="#fff" stroke="#e3d6e9" stroke-width="1.5">
+      <rect x="55" y="278" width="505" height="62" rx="12"/>
+      <rect x="55" y="350" width="505" height="62" rx="12"/>
+      <rect x="55" y="422" width="505" height="62" rx="12"/>
+      <rect x="55" y="494" width="505" height="62" rx="12"/>
+      <rect x="55" y="566" width="505" height="62" rx="12"/>
+    </g>
+    <g fill="#76508d" font-size="11" font-weight="700" letter-spacing="1">
+      <text x="72" y="299">HTML</text>
+      <text x="72" y="371">HTML</text>
+      <text x="72" y="443">HTML • CSS</text>
+      <text x="72" y="515">CSS</text>
+      <text x="72" y="587">JAVASCRIPT</text>
+    </g>
+    <g fill="#382a40" font-size="15" font-weight="700">
+      <text x="72" y="322">HTML ile Bir Sayfanın İskeletini Kurmak</text>
+      <text x="72" y="394">section, article ve div: Hangisini ne zaman kullanırım?</text>
+      <text x="72" y="466">Web Geliştirme Yolculuğum</text>
+      <text x="72" y="538">Blogum Mobilde ve Bilgisayarda Nasıl Görünüyor?</text>
+      <text x="72" y="610">Sitemin İlk JavaScript’i: Filtre ve Arama</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="640" y="91" width="150" height="38" rx="19" fill="url(#purple)"/>
+    <text x="715" y="116" fill="#fff" font-size="17" font-weight="700" text-anchor="middle">SONRASI</text>
+    <text x="640" y="158" fill="#382a40" font-size="20" font-weight="700">Yazılarım</text>
+    <rect x="640" y="173" width="505" height="42" rx="12" fill="#fff" stroke="#b999ce" stroke-width="2"/>
+    <text x="659" y="200" fill="#382a40" font-size="15">mobil</text>
+    <circle cx="1120" cy="194" r="9" fill="none" stroke="#76508d" stroke-width="2"/>
+    <line x1="1127" y1="201" x2="1134" y2="208" stroke="#76508d" stroke-width="2.5" stroke-linecap="round"/>
+
+    <rect x="640" y="229" width="86" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="683" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">Tümü</text>
+    <rect x="736" y="229" width="86" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="779" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">HTML</text>
+    <rect x="832" y="229" width="78" height="34" rx="17" fill="url(#purple)"/>
+    <text x="871" y="251" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">CSS</text>
+    <rect x="920" y="229" width="128" height="34" rx="17" fill="#f4eef7" stroke="#ddcce6"/>
+    <text x="984" y="251" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">JavaScript</text>
+
+    <rect x="640" y="278" width="505" height="92" rx="14" fill="#fbf8fc" stroke="#a47bb9" stroke-width="2"/>
+    <rect x="658" y="294" width="58" height="22" rx="11" fill="#eee3f4"/>
+    <text x="687" y="309" fill="#654080" font-size="11" font-weight="700" text-anchor="middle">CSS</text>
+    <text x="658" y="342" fill="#382a40" font-size="17" font-weight="700">Blogum Mobilde ve Bilgisayarda</text>
+    <text x="658" y="362" fill="#382a40" font-size="17" font-weight="700">Nasıl Görünüyor?</text>
+    <rect x="1019" y="336" width="108" height="26" rx="13" fill="url(#purple)"/>
+    <text x="1073" y="354" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">EŞLEŞTİ</text>
+
+    <g transform="translate(640 420)">
+      <rect width="505" height="150" rx="16" fill="#f6eff9"/>
+      <circle cx="42" cy="43" r="21" fill="#654080"/>
+      <path d="M32 43l7 7 14-16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="78" y="40" fill="#542b72" font-size="16" font-weight="700">Her iki koşul da sağlandı</text>
+      <text x="78" y="67" fill="#4d4352" font-size="15">Kategori: CSS</text>
+      <text x="78" y="91" fill="#4d4352" font-size="15">Başlıkta ara: “mobil”</text>
+      <line x1="25" y1="112" x2="480" y2="112" stroke="#ddcce6"/>
+      <text x="252" y="136" fill="#654080" font-size="14" font-weight="700" text-anchor="middle">Diğer kartlar gizlendi · 1 eşleşen yazı kaldı</text>
+    </g>
+  </g>
+</svg>

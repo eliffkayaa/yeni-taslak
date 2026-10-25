@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemin İlk JavaScript’i: Filtre ve Arama | Elif'in Blogu</title>
+    <meta name="description" content="Blogumda JavaScript ile yazıları kategoriye ve başlığa göre filtrelemeyi, aramayı ve iki özelliği birlikte kullanmayı öğreniyorum.">
+    <meta property="og:title" content="Sitemin İlk JavaScript’i: Filtre ve Arama">
+    <meta property="og:description" content="querySelectorAll, forEach ve diğer JavaScript kavramlarını blogumdaki yazı filtreleme ve arama özelliği üzerinden anlatıyorum.">
+    <meta property="og:image" content="./software.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
+            <div class="menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="ybs.html">YBS</a>
+                <a href="yazilar.html" aria-current="page">Yazılar</a>
+                <a href="hakkimda.html">Ben Kimim?</a>
+                <button id="theme-toggle" type="button" aria-pressed="false">🌙 Karanlık Mod</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="yazi-sayfasi">
+        <article class="yazi">
+            <p class="etiket">JAVASCRIPT • ÖĞRENME NOTLARI</p>
+            <h1>Sitemin İlk JavaScript’i: Filtre ve Arama</h1>
+            <p class="ozet">Yazılar sayfamda ziyaretçilerin ilgilendikleri konuları bulabilmesi için kategori filtreleri ve başlık araması ekledim. Bu yazıda, özelliğin blogumda nasıl çalıştığını öğrendiklerimle birlikte anlatıyorum.</p>
+
+            <h2>JavaScript ile tanışmam</h2>
+            <p>HTML sayfanın içeriğini, CSS ise görünümünü oluşturuyor. JavaScript ile sayfaya etkileşim ekleyebiliyorum. Blogumda ziyaretçi bir kategoriye tıkladığında veya arama alanına yazdığında yazı kartlarının değişmesi bunun bir örneği.</p>
+            <p><code>document.querySelectorAll(".yazi-karti")</code> sayfadaki tüm yazı kartlarını buluyor. Benzer şekilde <code>querySelectorAll(".yazi-filtre-dugmesi")</code> kategori düğmelerini seçiyor. Sonuç, seçilen elemanları sırayla dolaşabileceğim bir listedir.</p>
+            <p>Bu eleman listelerini <code>const</code> ile tanımlıyorum; çünkü bulduğum kartların ve düğmelerin referansını sonradan başka bir değerle değiştirmiyorum. Buna karşılık aktif kategori kullanıcı seçim yaptıkça değiştiğinden <code>let secilenKategori = "tumu"</code> olarak tutuluyor.</p>
+
+            <h2>Kategoriye göre filtreleme</h2>
+            <p>Her kartın HTML etiketinde kategori bilgisi bulunuyor. Örneğin <code>data-etiket="html css"</code> olan bir kart iki kategoriye de ait. JavaScript bu özel veriye <code>kart.dataset.etiket</code> ile ulaşıyor; boşlukla ayrılmış değerleri <code>split(" ")</code> ile listeye çeviriyor.</p>
+            <p>Kartları <code>forEach()</code> ile tek tek geziyorum. Seçilen kategori kartın kategori listesinde var mı diye <code>includes()</code> ile kontrol ediyorum. “Tümü” seçiliyse kategori koşulunu aramıyorum; başka bir kategori seçiliyse yalnızca o kategoriyle eşleşen kartlar kalıyor.</p>
+            <p>Seçilen kategori bilgisini <code>let</code> ile tutmamın nedeni, kategori düğmelerine tıklandığında bu değeri güncellemem. Her düğmeye eklediğim <code>addEventListener("click", ...)</code> tıklama olayı bu değişikliği ve filtreleme işlemini başlatıyor.</p>
+
+            <h2>Başlıkta arama</h2>
+            <p>Arama alanını <code>document.querySelector("#arama")</code> ile seçiyorum. <code>addEventListener("input", ...)</code> sayesinde ziyaretçi her yazı girdiğinde arama yeniden çalışıyor; ayrıca bir arama düğmesine basması gerekmiyor.</p>
+            <p>Yazılan metni ve kartın <code>h2</code> başlığını <code>toLocaleLowerCase("tr")</code> ile Türkçe yerel ayarına göre küçük harfe çeviriyorum. Böylece Türkçedeki büyük-küçük harf dönüşümleri doğru ele alınıyor. Ardından <code>includes()</code>, aranan metin başlığın içinde geçiyor mu diye bakıyor. Bu arama yazı açıklamalarında değil, başlıklarda yapılıyor.</p>
+
+            <h2>Filtre ve aramanın birlikte çalışması</h2>
+            <p><code>kartlariFiltrele()</code> adlı fonksiyon, seçili kategori ile arama metnini aynı anda kontrol ediyor. Bir kartın görünmesi için kategori koşulunun <strong>ve</strong> başlık arama koşulunun ikisi de doğru olmalı. Kategori değiştiğinde de arama alanına yeni bir şey yazıldığında da aynı fonksiyon tekrar çağrılıyor.</p>
+            <p>Sonucu <code>kart.hidden = !(kategoriEslesiyor &amp;&amp; aramaEslesiyor)</code> ile uyguluyorum. İki koşul da karşılanmıyorsa <code>hidden</code> özelliği kartı görünümden kaldırıyor. Eşleşme yoksa sayfadaki durum mesajı da gösteriliyor.</p>
+
+            <figure class="js-karsilastirma">
+                <img src="javascript-filtre-arama.svg" alt="Mor tonlarda iki yazılar sayfası görünümü: öncesinde filtre uygulanmadan beş blog kartı görünüyor; sonrasında CSS kategorisi ve mobil araması seçilince yalnızca “Blogum Mobilde ve Bilgisayarda Nasıl Görünüyor?” kartı kalıyor.">
+                <figcaption>Öncesinde bütün yazı kartları görünür. JavaScript eklendikten sonra CSS kategorisi ve “mobil” başlık araması birlikte uygulanır; yalnızca iki koşula da uyan yazı görünür kalır.</figcaption>
+            </figure>
+
+            <h2>Karşılaştığım sorunlar ve çözümler</h2>
+            <p>Bu özellik üzerinde çalışırken karşılaştığım belirli bir hata hakkında doğrulanmış bir bilgim yok; bu yüzden yaşamadığım bir sorunu yaşanmış gibi anlatmıyorum. Öğrenme sürecinde dikkat ettiğim nokta, her JavaScript adımının HTML’deki karşılığını bulmak ve kategori bilgisi, arama alanı ve başlıkların birbiriyle nasıl ilişkilendiğini takip etmek.</p>
+            <p>Bir hata ile karşılaştığımda hangi olayın tetiklendiğini ve ilgili değişkenin hangi değeri taşıdığını kontrol ederek ilerlemeyi planlıyorum. Böylece çözümü tahmin etmek yerine, kodun o anda ne yaptığını anlamaya çalışabilirim.</p>
+
+            <h2>Sonuç</h2>
+            <p>Yazılar sayfamdaki filtre ve arama, JavaScript’in HTML elemanlarını seçip kullanıcı etkileşimlerine göre değiştirebildiğini gösteriyor. <code>querySelectorAll()</code>, olay dinleyicileri, kategori verileri ve <code>hidden</code> gibi kavramları gerçek bir blog özelliğinde bir arada kullanmayı öğreniyorum. Daha iyi anlamak için bu özelliği geliştirirken denemeye ve pratik yapmaya devam edeceğim.</p>
+
+            <div class="geri-don">
+                <a href="yazilar.html">← Yazılar listesine dön</a>
+                <a href="index.html">Ana sayfaya dön</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Elif'in Blogu</p>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p>Instagram: <a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer">@kyaelffff</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer">Elif Kaya</a></p>
+    </footer>
+</body>
+</html>

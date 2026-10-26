@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,7 @@
 
     <main class="yazi-sayfasi">
         <article class="yazi">
+            <div class="geri-don yazi-listesi-ust"><a href="yazilar.html">← Yazılar listesine dön</a></div>
             <p class="etiket">JAVASCRIPT • ÖĞRENME NOTLARI</p>
             <h1>Sitemin İlk JavaScript’i: Filtre ve Arama</h1>
             <p class="ozet">Yazılar sayfamda ziyaretçilerin ilgilendikleri konuları bulabilmesi için kategori filtreleri ve başlık araması ekledim. Bu yazıda, özelliğin blogumda nasıl çalıştığını öğrendiklerimle birlikte anlatıyorum.</p>
@@ -55,14 +56,15 @@
             </figure>
 
             <h2>Karşılaştığım sorunlar ve çözümler</h2>
-            <p>Bu özellik üzerinde çalışırken karşılaştığım belirli bir hata hakkında doğrulanmış bir bilgim yok; bu yüzden yaşamadığım bir sorunu yaşanmış gibi anlatmıyorum. Öğrenme sürecinde dikkat ettiğim nokta, her JavaScript adımının HTML’deki karşılığını bulmak ve kategori bilgisi, arama alanı ve başlıkların birbiriyle nasıl ilişkilendiğini takip etmek.</p>
-            <p>Bir hata ile karşılaştığımda hangi olayın tetiklendiğini ve ilgili değişkenin hangi değeri taşıdığını kontrol ederek ilerlemeyi planlıyorum. Böylece çözümü tahmin etmek yerine, kodun o anda ne yaptığını anlamaya çalışabilirim.</p>
+            <p>Blog projemde arama kutusu ile kategori filtrelerini birlikte çalıştırırken zorlandım. Arama yapıldığında ve aynı anda bir kategori seçildiğinde yalnızca iki koşula da uyan yazıların görünmesini istiyordum. Ancak filtreleme mantığını oluştururken bu koşulları birlikte değerlendirmekte zorlandım.</p>
+            <p>Sorunu çözmek için JavaScript kodunu inceleyerek arama ve kategori koşullarının nasıl kontrol edildiğini öğrendim. Mantıksal &amp;&amp; operatörünün iki koşulun da doğru olmasını gerektirdiğini kavradım ve filtreleme mantığını buna göre düzenledim.</p>
+            <p>Bu süreçte JavaScript’te koşul yazmayı, HTML elemanlarını seçmeyi ve filtreleme işlemlerinin nasıl çalıştığını daha iyi öğrendim. Ayrıca hata aldığımda kodu adım adım incelemenin önemini fark ettim.</p>
 
             <h2>Sonuç</h2>
             <p>Yazılar sayfamdaki filtre ve arama, JavaScript’in HTML elemanlarını seçip kullanıcı etkileşimlerine göre değiştirebildiğini gösteriyor. <code>querySelectorAll()</code>, olay dinleyicileri, kategori verileri ve <code>hidden</code> gibi kavramları gerçek bir blog özelliğinde bir arada kullanmayı öğreniyorum. Daha iyi anlamak için bu özelliği geliştirirken denemeye ve pratik yapmaya devam edeceğim.</p>
 
             <div class="geri-don">
-                <a href="yazilar.html">← Yazılar listesine dön</a>
+
                 <a href="index.html">Ana sayfaya dön</a>
             </div>
         </article>
@@ -71,8 +73,8 @@
     <footer>
         <p>© 2026 Elif'in Blogu</p>
         <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
-        <p>Instagram: <a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer">@kyaelffff</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer">Elif Kaya</a></p>
+        <p><a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@kyaelffff</strong></a></p>
+        <p><a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Elif Kaya</strong></a></p>
     </footer>
 </body>
 </html>

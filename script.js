@@ -5,6 +5,7 @@ const sistemKaranlik = window.matchMedia("(prefers-color-scheme: dark)").matches
 const karanlikMod = kayitliTema === "karanlik"
     || (kayitliTema !== "aydinlik" && sistemKaranlik);
 
+// Verilen tema durumunu sayfaya ve tema düğmesine uygular.
 function temayiUygula(karanlik) {
     document.body.classList.toggle("karanlik", karanlik);
     if (themeButton) {
@@ -16,6 +17,7 @@ function temayiUygula(karanlik) {
 temayiUygula(karanlikMod);
 
 if (themeButton) {
+    // Tema düğmesine tıklandığında temayı değiştirip kaydeder.
     themeButton.addEventListener("click", function(){
         const karanlik = !document.body.classList.contains("karanlik");
         localStorage.setItem(temaAnahtari, karanlik ? "karanlik" : "aydinlik");
@@ -23,6 +25,7 @@ if (themeButton) {
     });
 }
 
+// Sayfa yüklendiğinde yazı filtreleri ve arama için olayları kurar.
 document.addEventListener("DOMContentLoaded", function(){
     const kartlar = document.querySelectorAll(".yazi-karti");
 
@@ -32,10 +35,12 @@ document.addEventListener("DOMContentLoaded", function(){
     if (aramaKutusu && sonucMesaji) {
         let secilenKategori = "tumu";
 
+        // Yazıları seçili kategoriye ve arama metnine göre filtreler.
         function kartlariFiltrele() {
             const arananMetin = aramaKutusu.value.toLocaleLowerCase("tr");
             let gorunenKartSayisi = 0;
 
+            // Her yazı kartının kategori ve başlık eşleşmesini kontrol eder.
             kartlar.forEach(function(kart){
                 const kategoriler = kart.dataset.etiket.split(" ");
                 const baslik = kart.querySelector("h2").textContent.toLocaleLowerCase("tr");
@@ -51,11 +56,14 @@ document.addEventListener("DOMContentLoaded", function(){
             sonucMesaji.hidden = gorunenKartSayisi > 0;
         }
 
+        // Her kategori düğmesine seçim davranışı ekler.
         filtreDugmeleri.forEach(function(dugme){
+            // Düğme tıklandığında kategoriyi seçip kartları yeniden filtreler.
             dugme.addEventListener("click", function(){
                 secilenKategori = dugme.dataset.filtre;
                 kartlariFiltrele();
 
+                // Kategori düğmelerinin seçili durumunu günceller.
                 filtreDugmeleri.forEach(function(filtreDugmesi){
                     const secili = filtreDugmesi === dugme;
                     filtreDugmesi.classList.toggle("aktif", secili);

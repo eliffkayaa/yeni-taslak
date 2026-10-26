@@ -940,6 +940,7 @@ select:focus-visible {
 }
 
 .yazi-karti {
+    align-self: start;
     background-color: white;
     border: 1px solid #E8C9D5;
     border-radius: 12px;
@@ -2399,4 +2400,9 @@ body.karanlik .ilgi-etiketleri li {
     color: var(--metin-rengi);
     font-size: 14px;
     text-align: center;
+}
+
+.yazi-listesi-ust {
+    margin-top: 0;
+    margin-bottom: 24px;
 }

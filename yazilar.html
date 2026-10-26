@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav>
 
@@ -35,7 +35,6 @@
         </nav>
     </header>
 
-
     <main>
 
         <section class="sayfa-baslik">
@@ -50,7 +49,6 @@
 
         </section>
 
-
         <div class="yazi-filtreleri" role="group" aria-label="Yazıları kategoriye göre filtrele">
             <button type="button" class="yazi-filtre-dugmesi aktif" data-filtre="tumu" aria-pressed="true">Tümü</button>
             <button type="button" class="yazi-filtre-dugmesi" data-filtre="html" aria-pressed="false">HTML</button>
@@ -60,7 +58,7 @@
 
         <section class="yazi-listesi" aria-label="Blog yazıları">
             <label for="arama">Yazılarda ara :</label>
-            <input type="text" id="arama" placeholder="Yazıları ara...">
+            <input type="search" id="search input" placeholder="Yazıları ara...">
             <p id="arama-sonucu" role="status" aria-live="polite" hidden>Bu aramaya uyan yazı yok.</p>
 
             <article class="yazi-karti" data-etiket="html">
@@ -94,30 +92,6 @@
 
             </article>
 
-            <article class="yazi-karti" data-etiket="html css">
-
-                <p class="etiket">İLK YAZIM • WEB GELİŞTİRME</p>
-
-                <h2>Web Geliştirme Yolculuğum</h2>
-
-                <p>HTML ve CSS ile web geliştirmeye attığım ilk adımları ve bu süreçte öğrendiklerimi paylaşıyorum.</p>
-
-                <a href="ilk-yazi.html">Yazıyı Oku</a>
-
-            </article>
-
-            <article class="yazi-karti" data-etiket="css">
-
-                <p class="etiket">RESPONSIVE TASARIM • ÖĞRENME NOTLARI</p>
-
-                <h2>Blogum Mobilde ve Bilgisayarda Nasıl Görünüyor?</h2>
-
-                <p>Ana sayfamın menü, yazı kartları ve metin düzeninin telefon ve masaüstünde nasıl değiştiğini inceliyorum.</p>
-
-                <a href="mobil-masaustu-karsilastirmasi.html">Yazıyı Oku</a>
-
-            </article>
-
             <article class="yazi-karti" data-etiket="javascript">
 
                 <p class="etiket">JAVASCRIPT</p>
@@ -129,10 +103,33 @@
                 <a href="yazi3.html">Yazıyı oku →</a>
 
             </article>
+
+            <article class="yazi-karti" data-etiket="css">
+
+                <p class="etiket">RESPONSIVE TASARIM • ÖĞRENME NOTLARI</p>
+
+                <h2>Blogum Mobilde ve Bilgisayarda Nasıl Görünüyor?</h2>
+
+                <p>Ana sayfamın menü, yazı kartları ve metin düzeninin telefon ve masaüstünde nasıl değiştiğini inceliyorum.</p>
+
+                <a href="mobil-masaustu-karsilastirmasi.html">Yazıyı oku →</a>
+
+            </article>
+
+            <article class="yazi-karti" data-etiket="html css">
+
+                <p class="etiket">İLK YAZIM • WEB GELİŞTİRME</p>
+
+                <h2>Web Geliştirme Yolculuğum</h2>
+
+                <p>HTML ve CSS ile web geliştirmeye attığım ilk adımları ve bu süreçte öğrendiklerimi paylaşıyorum.</p>
+
+                <a href="ilk-yazi.html">Yazıyı oku →</a>
+
+            </article>
         </section>
 
     </main>
-
 
     <footer>
         <p>© 2026 Elif'in Blogu</p>

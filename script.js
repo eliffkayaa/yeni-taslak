@@ -25,8 +25,8 @@ if (themeButton) {
     });
 }
 
-// Sayfa yüklendiğinde yazı filtreleri ve arama için olayları kurar.
-document.addEventListener("DOMContentLoaded", function(){
+// JSON'dan kartlar geldikten sonra filtre ve arama olaylarını kurar.
+function yazilariFiltrelemeyiKur() {
     const kartlar = document.querySelectorAll(".yazi-karti");
 
     const filtreDugmeleri = document.querySelectorAll(".yazi-filtre-dugmesi");
@@ -74,5 +74,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
         aramaKutusu.addEventListener("input", kartlariFiltrele);
     }
+}
 
-});
+document.addEventListener("yazilar:yuklendi", yazilariFiltrelemeyiKur);

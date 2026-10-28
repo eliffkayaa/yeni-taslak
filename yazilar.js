@@ -12,6 +12,8 @@ async function yazilariGetir() {
         const kartlar = document.createDocumentFragment();
 
         yazilar.forEach(function (yazi) {
+            // JSON metinlerini textContent ile eklemek, içeriğin HTML olarak çalışmasını önler.
+            // innerHTML güvenilmeyen metni HTML olarak yorumlayıp XSS/enjekte edilmiş içerik riski doğurabilir.
             const kart = document.createElement("article");
             kart.className = "yazi-karti";
             kart.dataset.etiket = yazi.etiketler

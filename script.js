@@ -33,41 +33,40 @@ function yazilariFiltrelemeyiKur() {
     const aramaKutusu = document.querySelector("#arama");
     const sonucMesaji = document.querySelector("#arama-sonucu");
     if (aramaKutusu && sonucMesaji) {
-        let secilenKategori = "tumu";
+        let secilenEtiket = "tumu";
 
-        // Yazıları seçili kategoriye ve arama metnine göre filtreler.
+        // Yazıları seçili etikete ve arama metnine göre filtreler.
         function kartlariFiltrele() {
             const arananMetin = aramaKutusu.value.toLocaleLowerCase("tr");
-            let gorunenKartSayisi = 0;
 
-            // Her yazı kartının kategori ve başlık eşleşmesini kontrol eder.
-            kartlar.forEach(function(kart){
-                const kategoriler = kart.dataset.etiket.split(" ");
+            const eslesenKartlar = Array.from(kartlar).filter(function(kart){
+                const etiketler = JSON.parse(kart.dataset.etiket);
                 const baslik = kart.querySelector("h2").textContent.toLocaleLowerCase("tr");
-                const kategoriEslesiyor = secilenKategori === "tumu" || kategoriler.includes(secilenKategori);
+                const etiketEslesiyor = secilenEtiket === "tumu" || etiketler.includes(secilenEtiket);
                 const aramaEslesiyor = baslik.includes(arananMetin);
 
-                kart.hidden = !(kategoriEslesiyor && aramaEslesiyor);
-                if (!kart.hidden) {
-                    gorunenKartSayisi++;
-                }
+                return etiketEslesiyor && aramaEslesiyor;
             });
 
-            sonucMesaji.hidden = gorunenKartSayisi > 0;
+            kartlar.forEach(function(kart){
+                kart.hidden = !eslesenKartlar.includes(kart);
+            });
+
+            sonucMesaji.hidden = eslesenKartlar.length > 0;
         }
 
-        // Her kategori düğmesine seçim davranışı ekler.
+        // Her etiket düğmesine seçim davranışı ekler.
         filtreDugmeleri.forEach(function(dugme){
-            // Düğme tıklandığında kategoriyi seçip kartları yeniden filtreler.
+            // Düğme tıklandığında etiketi seçip kartları yeniden filtreler.
             dugme.addEventListener("click", function(){
-                secilenKategori = dugme.dataset.filtre;
+                secilenEtiket = dugme.dataset.filtre;
                 kartlariFiltrele();
 
-                // Kategori düğmelerinin seçili durumunu günceller.
+                // Filtre düğmelerinin seçili durumunu günceller.
                 filtreDugmeleri.forEach(function(filtreDugmesi){
                     const secili = filtreDugmesi === dugme;
                     filtreDugmesi.classList.toggle("aktif", secili);
-                    filtreDugmesi.setAttribute("aria-pressed", secili);
+                    filtreDugmesi.setAttribute("aria-pressed", String(secili));
                 });
             });
         });

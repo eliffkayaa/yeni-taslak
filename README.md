@@ -21,7 +21,7 @@ Sitem index.html dosyası üzerinden açılır. VS Code'da Live server kullanara
 Görsel alt metinlerini, dosya adlarını, SEO meta etiketlerini ve ilgili kaynak bağlantılarını düzenledim. SEO etiketlerini, arama motorlarının sayfa içeriğini daha iyi anlamasına ve blog bağlantısı paylaşıldığında başlık ile açıklamanın doğru görüntülenmesine yardımcı olması için düzenledim. Uygun SEO çalışmaları, sitenin arama sonuçlarında daha üst sıralarda görünmesine katkı sağlayabilir.
 
 # Canlı Site Bağlantım
-- https://yeni-taslak.vercel.app
+- https://yeni-taslak.verc
 
 24.10.2026
 

@@ -40,7 +40,10 @@ async function yazilariGetir() {
         });
 
         function tarihZamaniniAl(tarih) {
-            const [gun, ay, yil] = tarih.split("-").map(Number);
+            const parcalar = tarih.split("-").map(Number);
+            const [yil, ay, gun] = parcalar[0] > 999
+                ? parcalar
+                : [parcalar[2], parcalar[1], parcalar[0]];
             return Date.UTC(yil, ay - 1, gun);
         }
 
@@ -79,8 +82,10 @@ async function yazilariGetir() {
         yukleniyor.remove();
         document.dispatchEvent(new Event("yazilar:yuklendi"));
     } catch (hata) {
-        console.error("Yazılar yüklenirken hata oluştu:", hata);
-        yukleniyor.textContent = "Yazılar yüklenemedi. Lütfen daha sonra tekrar deneyin.";
+        console.error("Yazılar yüklenemedi:", hata);
+        yukleniyor.textContent = "Yazılar yüklenemedi";
+        yukleniyor.setAttribute("role", "alert");
+        yukleniyor.setAttribute("aria-live", "assertive");
     }
 }
 

@@ -33,7 +33,11 @@ function yazilariFiltrelemeyiKur() {
     const aramaKutusu = document.querySelector("#arama");
     const sonucMesaji = document.querySelector("#arama-sonucu");
     if (aramaKutusu && sonucMesaji) {
-        let secilenEtiket = "tumu";
+        const parametreler = new URLSearchParams(window.location.search);
+        const urlEtiketi = parametreler.get("etiket");
+        let secilenEtiket = urlEtiketi
+            ? urlEtiketi.toLocaleLowerCase("tr")
+            : "tumu";
 
         // Yazıları seçili etikete ve arama metnine göre filtreler.
         function kartlariFiltrele() {
@@ -55,21 +59,43 @@ function yazilariFiltrelemeyiKur() {
             sonucMesaji.hidden = eslesenKartlar.length > 0;
         }
 
-        // Her etiket düğmesine seçim davranışı ekler.
-        filtreDugmeleri.forEach(function(dugme){
-            // Düğme tıklandığında etiketi seçip kartları yeniden filtreler.
-            dugme.addEventListener("click", function(){
-                secilenEtiket = dugme.dataset.filtre;
-                kartlariFiltrele();
+        function etiketiSec(dugme, urlGuncellensin) {
+            secilenEtiket = dugme.dataset.filtre;
 
-                // Filtre düğmelerinin seçili durumunu günceller.
-                filtreDugmeleri.forEach(function(filtreDugmesi){
-                    const secili = filtreDugmesi === dugme;
-                    filtreDugmesi.classList.toggle("aktif", secili);
-                    filtreDugmesi.setAttribute("aria-pressed", String(secili));
-                });
+            filtreDugmeleri.forEach(function(filtreDugmesi){
+                const secili = filtreDugmesi === dugme;
+                filtreDugmesi.classList.toggle("aktif", secili);
+                filtreDugmesi.setAttribute("aria-pressed", String(secili));
+            });
+
+            if (urlGuncellensin) {
+                const adres = new URL(window.location.href);
+                if (secilenEtiket === "tumu") {
+                    adres.searchParams.delete("etiket");
+                } else {
+                    adres.searchParams.set("etiket", dugme.textContent);
+                }
+                window.history.replaceState(window.history.state, "", adres);
+            }
+
+            kartlariFiltrele();
+        }
+
+        filtreDugmeleri.forEach(function(dugme){
+            dugme.addEventListener("click", function(){
+                etiketiSec(dugme, true);
             });
         });
+
+        const urlEtiketDugmesi = Array.from(filtreDugmeleri).find(
+            dugme => dugme.dataset.filtre === secilenEtiket
+        );
+        if (urlEtiketDugmesi) {
+            etiketiSec(urlEtiketDugmesi, false);
+        } else {
+            secilenEtiket = "tumu";
+            kartlariFiltrele();
+        }
 
         aramaKutusu.addEventListener("input", kartlariFiltrele);
     }

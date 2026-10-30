@@ -916,6 +916,11 @@ select:focus-visible {
     gap: 16px;
 }
 
+.yazi-listesi #yazilar-yukleniyor {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
 .yazi-listesi label[for="arama"],
 .yazi-listesi #arama {
     grid-column: 1 / -1;

@@ -34,3 +34,12 @@ Görsel alt metinlerini, dosya adlarını, SEO meta etiketlerini ve ilgili kayna
 | Yazılar | Sonuç | 100 | 95 | 100 | 100 |
 
 - Sorun yalnızca erişilebilirlik bölümünde görüldü. Renk kontrastı ve okunabilirlik sorunlarını düzelttim.
+
+30.10.2026
+
+# 5. Gün
+
+- `URLSearchParams` ile URL'deki `etiket` parametresini okuyup seçili etiketi sayfa açılırken uygulamayı öğrendim.
+- Etiket filtrelerini URL ile eşleştirdim; "Tümü" seçeneği etiketi URL'den kaldırıyor. Etiket filtresi, başlık aramasıyla birlikte çalışıyor ve Türkçe karakterleri doğru ele alıyor.
+- `yazilar.json` yüklenemediğinde sayfada erişilebilir bir hata mesajı göstermeyi ve hatayı konsola anlaşılır şekilde yazmayı öğrendim.
+- Vercel önizleme ayarlarını inceleme ve değişiklikleri önizleme ortamında masaüstü ile mobil ekranlarda kontrol etme sürecini öğrendim. Bu çalışmada Vercel önizleme erişimi/yapılandırması bulunmadığı için Vercel dağıtımı doğrulanmadı.

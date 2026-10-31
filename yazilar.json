@@ -4,34 +4,34 @@
     "ozet": "Bu yazıda HTML kullanarak bir web sayfasının temel yapısını nasıl oluşturduğumu anlatıyorum.",
     "etiketler": ["HTML", "Web Geliştirme"],
     "link": "yazi2.html",
-    "tarih": "11-10-2026"
+    "tarih": "2026-10-11"
   },
   {
     "baslik": "section, article ve div: Hangisini ne zaman kullanırım?",
     "ozet": "Bu üç etiket içerikleri gruplamak için kullanılır. Ben de sayfamı düzenlerken aralarındaki farkı karıştırdım. Kendi blogumdan örneklerle öğrendiklerimi anlatıyorum.",
     "etiketler": ["HTML", "Öğrenme Notları"],
     "link": "etiketler.html",
-    "tarih": "13-10-2026"
+    "tarih": "2026-10-13"
   },
   {
     "baslik": "Sitemin İlk JavaScript’i: Filtre ve Arama",
     "ozet": "Yazılar sayfamda ziyaretçilerin ilgilendikleri konuları bulabilmesi için kategori filtreleri ve başlık araması ekledim. Bu yazıda, özelliğin blogumda nasıl çalıştığını öğrendiklerimle birlikte anlatıyorum.",
     "etiketler": ["JavaScript", "Öğrenme Notları"],
     "link": "yazi3.html",
-    "tarih": "19-10-2026"
+    "tarih": "2026-10-19"
   },
   {
     "baslik": "Blogum Telefonda ve Bilgisayarda Nasıl Görünüyor?",
     "ozet": "Bir YBS öğrencisi olarak blogumu farklı ekranlarda inceliyor, tasarımın her ikisinde de anlaşılır ve kullanışlı olmasına çalışıyorum.",
     "etiketler": ["CSS", "Responsive Tasarım", "Öğrenme Notları"],
     "link": "mobil-masaustu-karsilastirmasi.html",
-    "tarih": "15-10-2026"
+    "tarih": "2026-10-15"
   },
   {
     "baslik": "Web Geliştirme Yolculuğum",
     "ozet": "YBS 2. sınıfta kendime en uygun alanı bulmak adına başladığım bu serüvende HTML ve CSS ile ilk adımları atıyorum.",
     "etiketler": ["HTML", "CSS", "Web Geliştirme"],
     "link": "ilk-yazi.html",
-    "tarih": "11-10-2026"
+    "tarih": "2026-10-11"
   }
 ]

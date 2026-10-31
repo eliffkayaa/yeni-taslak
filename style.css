@@ -1907,15 +1907,12 @@ body li,
     color: #FFFFFF;
 }
 
-.menu a[aria-current="page"],
-.menu a[aria-current="page"]:hover,
-.menu a[aria-current="page"]:focus-visible {
-    padding: 6px 12px;
-    border-radius: 7px;
-    background: #54263D;
-    box-shadow: 0 4px 12px rgba(56, 32, 42, .2);
-    color: #FFFFFF;
-    text-decoration: none;
+.menu a[aria-current="page"] {
+    color: var(--ana-renk);
+    text-decoration: underline;
+    text-decoration-color: var(--ikincil-renk);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
 }
 
 footer {
@@ -2010,11 +2007,6 @@ body.karanlik .onizleme-icerik > p:not(.onizleme-etiket),
 body.karanlik footer a,
 body.karanlik footer p:nth-child(n + 3) a span {
     color: var(--metin);
-}
-
-body.karanlik .menu a[aria-current="page"] {
-    background: var(--buton-rengi);
-    color: #FFFFFF;
 }
 
 #theme-toggle {

@@ -132,7 +132,7 @@ Ziyaretçi olarak ana sayfada en güncel yazıları görmek istiyorum. Böylece 
 | URL filtresi ve sıralama | CSS URL filtresi çalışır; sıralama seçimi kart sırasını değiştirir. | **Geçti:** `?etiket=css` 2 yazı gösterdi; kart etiketi URL’yi değiştirdi; eski ve alfabetik sıralama ile arama+filtre birlikte kontrol edildi. |
 | JSON yükleme hatası | Hata mesajı `yazilar.json` adını içerir. | **Geçti:** Sahte HTTP 503 yanıtında görünür `alert` mesajı `yazilar.json` adını içerdi. |
 | Ana sayfada son üç yazı | JSON tarihine göre en güncel üç yazı doğru bağlantılarla gösterilir. | **Geçti:** Ana sayfada JSON’dan 3 kart, beklenen başlıklar ve bağlantılar oluştu. |
-| Vercel yayını ve canlı bağlantı | GitHub değişikliği Vercel’de yayınlanır; README bağlantısı çalışan üretim adresidir. | README adresi GitHub depo bilgisindeki Vercel adresiyle eşleşiyor; canlı sayfa isteği bağlantı sıfırlamasıyla sonuçlandı, otomatik yayın ve hesap ayarları doğrulanamadı. |
+| Vercel yayını ve canlı bağlantı | GitHub değişikliği Vercel’de yayınlanır; README bağlantısı çalışan üretim adresidir. | **Kısmen doğrulandı:** `2910890` commit’i `adres-filtreleme` branch’ine push edildi; README’deki adres Vercel adresiyle eşleşiyor. Canlı URL isteği bu ortamda zaman aşımına uğradı; GitHub’daki en son dağıtım kaydı 25 Ekim tarihli GitHub Pages dağıtımı. Vercel otomatik yayını doğrulanamadı. GitHub oturumu açık olmadığı ve `gh` bulunmadığı için PR/önizleme oluşturulamadı. |
 
 ## Lighthouse Mobil Ölçümü
 

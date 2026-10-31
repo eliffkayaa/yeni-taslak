@@ -18,6 +18,7 @@ temayiUygula(karanlikMod);
 
 if (themeButton) {
     // Tema düğmesine tıklandığında temayı değiştirip kaydeder.
+    // Bu olay işleyicisi tema düğmesine yapılan tıklamaları yönetir.
     themeButton.addEventListener("click", function(){
         const karanlik = !document.body.classList.contains("karanlik");
         localStorage.setItem(temaAnahtari, karanlik ? "karanlik" : "aydinlik");
@@ -43,6 +44,7 @@ function yazilariFiltrelemeyiKur() {
         function kartlariFiltrele() {
             const arananMetin = aramaKutusu.value.toLocaleLowerCase("tr");
 
+            // Her kartın aranan başlık ve seçilen etiketle eşleşip eşleşmediğini denetler.
             const eslesenKartlar = Array.from(kartlar).filter(function(kart){
                 const etiketler = JSON.parse(kart.dataset.etiket);
                 const baslik = kart.querySelector("h2").textContent.toLocaleLowerCase("tr");
@@ -52,6 +54,7 @@ function yazilariFiltrelemeyiKur() {
                 return etiketEslesiyor && aramaEslesiyor;
             });
 
+            // Eşleşmeyen kartları gizler, eşleşme mesajını günceller.
             kartlar.forEach(function(kart){
                 kart.hidden = !eslesenKartlar.includes(kart);
             });
@@ -59,9 +62,11 @@ function yazilariFiltrelemeyiKur() {
             sonucMesaji.hidden = eslesenKartlar.length > 0;
         }
 
+        // Seçilen etiketi etkinleştirir, gerekirse URL'yi günceller.
         function etiketiSec(dugme, urlGuncellensin) {
             secilenEtiket = dugme.dataset.filtre;
 
+            // Filtre düğmelerinin görsel ve erişilebilir seçili durumunu günceller.
             filtreDugmeleri.forEach(function(filtreDugmesi){
                 const secili = filtreDugmesi === dugme;
                 filtreDugmesi.classList.toggle("aktif", secili);
@@ -81,12 +86,39 @@ function yazilariFiltrelemeyiKur() {
             kartlariFiltrele();
         }
 
+        // Her filtre düğmesine tıklama davranışını ekler.
         filtreDugmeleri.forEach(function(dugme){
+            // Tıklanan filtre düğmesini seçer ve URL'yi günceller.
             dugme.addEventListener("click", function(){
                 etiketiSec(dugme, true);
             });
+
+            // Enter veya boşluk tuşunu düğme tıklamasıyla aynı şekilde işler.
+            dugme.addEventListener("keydown", function(olay){
+                if (olay.key === "Enter" || olay.key === " ") {
+                    olay.preventDefault();
+                    dugme.click();
+                }
+            });
         });
 
+        // Yazı kartındaki etiket bağlantısını, sayfayı yenilemeden filtreye dönüştürür.
+        document.querySelectorAll(".yazi-karti .etiket a").forEach(function(baglanti){
+            // Etiket bağlantısına tıklandığında eşleşen filtre düğmesini seçer.
+            baglanti.addEventListener("click", function(olay){
+                const etiketDugmesi = Array.from(filtreDugmeleri).find(
+                    dugme => dugme.dataset.filtre
+                        === baglanti.textContent.toLocaleLowerCase("tr")
+                );
+
+                if (etiketDugmesi) {
+                    olay.preventDefault();
+                    etiketiSec(etiketDugmesi, true);
+                }
+            });
+        });
+
+        // URL'deki etikete karşılık gelen düğmeyi bulur.
         const urlEtiketDugmesi = Array.from(filtreDugmeleri).find(
             dugme => dugme.dataset.filtre === secilenEtiket
         );

@@ -33,5 +33,37 @@
     "etiketler": ["HTML", "CSS", "Web Geliştirme"],
     "link": "ilk-yazi.html",
     "tarih": "2026-10-11"
+  },
+  {
+    "baslik": "Blog Projesinde Yapılan Değişikliklerin Yayınlanan Siteye Yansımaması Sorunu",
+    "ozet": "GitHub’a gönderdiğim değişikliklerin yayınlanan blog sitemde görünmemesi ve bazı yayınların açılmaması sorununu nasıl incelediğimi ve çözdüğümü anlatıyorum.",
+    "etiketler": ["Web Geliştirme"],
+    "link": "blog-yayinlama-sorunu.html",
+    "tarih": "2026-10-31"
+  },
+  {
+    "baslik": "Yayınlanan Blog Sürümünü Kontrol Etmek",
+    "ozet": "GitHub’a gönderdiğim değişiklikler yayınlanan sitede görünmeyince dosyaları ve Vercel yayınlarını kontrol ettim; çalışan site sürümünü inceleyerek blogumun tekrar açıldığını doğruladım.",
+    "etiketler": ["Web Geliştirme", "Öğrenme Notları"],
+    "link": "blog-yayinlama-sorunu.html",
+    "tarih": "2026-10-31",
+    "icerik": [
+      {
+        "baslik": "Karşılaştığım Sorun",
+        "metin": "Blog projem üzerinde çalışırken yaptığım değişikliklerin yayınlanan web sitesinde görünmediğini fark ettim. GitHub üzerindeki dosyalarım güncel olmasına rağmen sitede bazı değişiklikler görünmüyordu ve bazı yazılar açılmıyordu."
+      },
+      {
+        "baslik": "Sorunu Nasıl Fark Ettim?",
+        "metin": "GitHub’a değişiklikleri gönderdikten sonra yayınlanan blogu açıp kontrol ettim. Son değişiklikleri göremeyince GitHub’daki dosyaları ve Vercel’deki yayınları karşılaştırmaya başladım."
+      },
+      {
+        "baslik": "Sorunu Nasıl Çözdüm?",
+        "metin": "Vercel’deki yayınlama işlemlerini inceleyerek çalışan site sürümünü buldum ve siteyi tekrar kontrol ettim. Sonunda blog sitemin açıldığını ve çalıştığını gördüm."
+      },
+      {
+        "baslik": "Sonuç",
+        "metin": "Bu deneyim, GitHub’a kod göndermenin web sitesinin yayınlandığını tek başına göstermediğini öğretti. Yayınlanan sitenin güncelliğini ayrıca kontrol etmenin ve karşılaşılan hataları adım adım incelemenin önemini anladım."
+      }
+    ]
   }
 ]

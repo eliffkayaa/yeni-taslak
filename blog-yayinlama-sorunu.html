@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Projesinde Yapılan Değişikliklerin Yayınlanan Siteye Yansımaması Sorunu | Elif'in Blogu</title>
+    <meta name="description" content="GitHub'a gönderilen değişikliklerin yayınlanan blog sitesinde görünmemesi sorununu nasıl incelediğimi ve çözdüğümü anlatıyorum.">
+    <meta property="og:title" content="Blog Projesinde Yapılan Değişikliklerin Yayınlanan Siteye Yansımaması Sorunu">
+    <meta property="og:description" content="GitHub'daki değişiklikleri ve Vercel'de yayınlanan siteyi kontrol ederek yaşadığım sorunu nasıl çözdüğümü anlatıyorum.">
+    <meta property="og:image" content="./software.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="site-title"><a href="index.html">Elif'in Blogu</a></h2>
+            <div class="menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="ybs.html">YBS</a>
+                <a href="yazilar.html" aria-current="page">Yazılar</a>
+                <a href="hakkimda.html">Ben Kimim?</a>
+                <button id="theme-toggle" type="button" aria-pressed="false">🌙 Karanlık Mod</button>
+            </div>
+        </nav>
+    </header>
+    <main class="yazi-sayfasi">
+        <article class="yazi">
+            <div class="geri-don yazi-listesi-ust"><a href="yazilar.html">← Yazılar listesine dön</a></div>
+            <p class="etiket">WEB GELİŞTİRME</p>
+            <h1>Blog Projesinde Yapılan Değişikliklerin Yayınlanan Siteye Yansımaması Sorunu</h1>
+            <p class="ozet">GitHub’a gönderdiğim değişikliklerin yayınlanan blog sitemde görünmemesi ve bazı yayınların açılmaması sorununu nasıl incelediğimi ve çözdüğümü anlatıyorum.</p>
+
+            <h2>Karşılaştığım Sorun</h2>
+            <p>Blog projem üzerinde çalışırken yaptığım değişikliklerin yayınlanan web sitesinde görünmediğini fark ettim. GitHub üzerinde dosyalarım güncel olmasına rağmen yayınlanan siteyi kontrol ettiğimde bazı değişiklikler görünmüyordu. Ayrıca bazı yayınların açılmasında sorun yaşadım.</p>
+
+            <h2>Sorunu Nasıl Fark Ettim?</h2>
+            <p>GitHub’a yaptığım değişiklikleri gönderdikten sonra yayınlanan blog sitesini açarak kontrol ettim. Ancak sitede yaptığım son değişikliklerin görünmediğini fark ettim. Bu durum üzerine GitHub’daki dosyaları ve Vercel üzerinden yayınlanan siteyi kontrol etmeye başladım.</p>
+
+            <h2>Sorunu Nasıl Çözdüm?</h2>
+            <p>GitHub üzerindeki değişiklikleri ve Vercel’deki yayınları kontrol ettim. Yayınlanan sitenin doğru sürümünü bulmak için yayınlama işlemlerini inceleyerek çalışan siteyi tekrar kontrol ettim. Sonunda blog sitemin açıldığını ve çalıştığını gördüm.</p>
+
+            <h2>Sonuç</h2>
+            <p>Bu sorun sayesinde GitHub’a kod göndermek ile web sitesini yayınlamak arasındaki farkı daha iyi öğrendim. Ayrıca yayınlanan sitenin güncel olup olmadığını kontrol etmenin ve karşılaşılan hataları adım adım incelemenin önemini anladım.</p>
+
+            <div class="geri-don">
+                <a href="index.html">Ana sayfaya dön</a>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>© 2026 Elif'in Blogu</p>
+        <p>Öğreniyorum, üretiyorum, paylaşıyorum.</p>
+        <p><a href="https://www.instagram.com/kyaelffff/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@kyaelffff</strong></a></p>
+        <p><a href="https://www.linkedin.com/in/elif-kaya-b58777379" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Elif Kaya</strong></a></p>
+    </footer>
+</body>
+</html>

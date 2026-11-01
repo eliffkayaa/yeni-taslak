@@ -60,18 +60,14 @@ async function yazilariGetir() {
             );
 
             const etiket = document.createElement("p");
-            etiket.className = "etiket";
-            yazi.etiketler.forEach(function (kategori, sira) {
+            etiket.className = "etiket yazi-karti-etiket";
+            yazi.etiketler.forEach(function (kategori) {
                 const etiketBaglantisi = document.createElement("a");
                 const adres = new URL("yazilar.html", window.location.href);
                 adres.searchParams.set("etiket", kategori);
                 etiketBaglantisi.href = adres.href;
                 etiketBaglantisi.textContent = kategori;
                 etiket.append(etiketBaglantisi);
-
-                if (sira < yazi.etiketler.length - 1) {
-                    etiket.append(document.createTextNode(" • "));
-                }
             });
 
             const baslik = document.createElement("h2");

@@ -37,7 +37,6 @@ Görsel alt metinlerini, dosya adlarını, SEO meta etiketlerini ve ilgili kayna
 
 30.10.2026
 
-# 5. Gün
 
 - `URLSearchParams` ile URL'deki `etiket` parametresini okuyup seçili etiketi sayfa açılırken uygulamayı öğrendim.
 - Etiket filtrelerini URL ile eşleştirdim; "Tümü" seçeneği etiketi URL'den kaldırıyor. Etiket filtresi, başlık aramasıyla birlikte çalışıyor ve Türkçe karakterleri doğru ele alıyor.
@@ -113,8 +112,6 @@ Ziyaretçi olarak ana sayfada en güncel yazıları görmek istiyorum. Böylece 
 2. Yeni yazının tam metni JSON’da tutulmalı ve yazı listesinde açılabilmeli; yeni yazı eklemek için `yazilar.html` veya yeni bir HTML dosyası değiştirilmemelidir.
 3. Ana sayfadaki her yazı kartı doğru başlık, özet ve mevcut yazı bağlantısını göstermelidir.
 
-**JSON ve Fetch notu:** `fetch("yazilar.json")` yanıtı `await response.json()` ile JavaScript verisine dönüştürür. `file://` adresinde tarayıcıların güvenlik kuralları yerel dosya isteklerini engelleyebilir; bu nedenle Live Server gibi bir HTTP sunucusu veya Vercel kullanılmalıdır. Kaynaklar: [MDN JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) ve [MDN Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
-
 **Güvenli metin ekleme:** `innerHTML`, metni HTML olarak yorumlayıp istenmeyen işaretlemeyi çalıştırabilir; JSON’dan gelen metinleri `textContent` ile eklemek bunu önler.
 
 **Önizleme ve canlı site:** Vercel önizlemesi bir branch/pull request değişikliklerini ayrı URL’de gösterirken canlı adres üretim branch’inin yayınlanan sürümünü gösterir.
@@ -134,10 +131,5 @@ Ziyaretçi olarak ana sayfada en güncel yazıları görmek istiyorum. Böylece 
 | Ana sayfada son üç yazı | JSON tarihine göre en güncel üç yazı doğru bağlantılarla gösterilir. | **Geçti:** Ana sayfada JSON’dan 3 kart, beklenen başlıklar ve bağlantılar oluştu. |
 | Vercel yayını ve canlı bağlantı | GitHub değişikliği Vercel’de yayınlanır; README bağlantısı çalışan üretim adresidir. | **Kısmen doğrulandı:** `2910890` commit’i `adres-filtreleme` branch’ine push edildi; README’deki adres Vercel adresiyle eşleşiyor. Canlı URL ve GitHub kontrolünden alınan Vercel önizleme URL’si bu ortamda zaman aşımına uğradı. Kontrol kaydı `Vercel Preview Comments` olarak başarılı; GitHub’daki en son dağıtım kaydı 25 Ekim tarihli GitHub Pages dağıtımı. Üretim yayını ve telefonda önizleme doğrulanamadı. GitHub oturumu açık olmadığı ve `gh` bulunmadığı için PR oluşturulamadı. |
 
-## Lighthouse Mobil Ölçümü
-
-| Sayfa | Önce (mobil) | Sonra (mobil) | Not |
-|---|---:|---:|---|
-| Ana sayfa | Ölçülemedi | Ölçülemedi | PageSpeed Insights isteği HTTP 429 verdi; yerel Lighthouse komutu kurulu değil. Puan uydurulmadı. |
 
 **Kod inceleme notu:** `yazilar.js` içindeki `liste.append(siraliKartlar);` satırını, ilk yüklemede kaldırılan yükleniyor öğesine sonraki sıralama değişikliklerinde tekrar `insertBefore` yapılmaması için kullandım. Böylece kartlar mevcut listeye yeniden sıralı olarak ekleniyor.

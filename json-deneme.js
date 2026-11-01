@@ -38,7 +38,9 @@ async function anaSayfaYazilariniGetir() {
             baslik.textContent = yazi.baslik;
 
             const ozet = document.createElement("p");
-            ozet.textContent = yazi.ozet;
+            ozet.textContent = typeof yazi.ozet === "string" && yazi.ozet.trim()
+                ? yazi.ozet
+                : "Bu yazı için henüz açıklama eklenmedi";
 
             const baglanti = document.createElement("a");
             baglanti.href = yazi.link;

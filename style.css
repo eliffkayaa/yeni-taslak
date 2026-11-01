@@ -2429,7 +2429,309 @@ body.karanlik .ilgi-etiketleri li {
     text-align: center;
 }
 
+.yazi-gorsel {
+    width: min(100%, 460px);
+    margin: 0 auto 34px;
+}
+
+.yazi-gorsel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--kenarlik-rengi);
+    border-radius: 16px;
+    background: var(--sayfa-arkaplan);
+}
+
+.yazi-gorsel figcaption {
+    margin-top: 9px;
+    color: var(--metin-rengi);
+    font-size: 13px;
+    text-align: center;
+}
+
 .yazi-listesi-ust {
     margin-top: 0;
     margin-bottom: 24px;
+}
+
+/* YAZILAR SAYFASI */
+.yazilar-sayfasi {
+    width: min(100%, 1160px);
+    margin-inline: auto;
+    padding: 0 28px;
+}
+
+.yazilar-sayfasi .sayfa-baslik {
+    padding: 68px 0 36px;
+    text-align: center;
+}
+
+.yazilar-sayfasi .sayfa-baslik .etiket {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    border: 1px solid var(--kenarlik-rengi);
+    border-radius: 999px;
+    background: var(--kart-arkaplan);
+    color: var(--ana-renk);
+    font-size: 11px;
+    letter-spacing: .12em;
+}
+
+.yazilar-sayfasi .sayfa-baslik h1 {
+    margin-bottom: 10px;
+    font-size: clamp(36px, 5vw, 52px);
+    letter-spacing: -.04em;
+}
+
+.yazilar-sayfasi .sayfa-baslik p:last-child {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.yazi-filtreleri {
+    max-width: 100%;
+    padding: 0;
+    gap: 9px;
+}
+
+.yazi-filtre-dugmesi {
+    min-height: 38px;
+    padding: 7px 14px;
+    border-color: var(--kenarlik-rengi);
+    background: var(--kart-arkaplan);
+    color: var(--metin-rengi);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.yazi-filtre-dugmesi:hover {
+    transform: translateY(-1px);
+}
+
+.yazi-filtre-dugmesi:hover,
+.yazi-filtre-dugmesi.aktif {
+    border-color: var(--ana-renk);
+    background: var(--ana-renk);
+    color: #FFFFFF;
+}
+
+.yazi-siralama {
+    max-width: 1060px;
+    width: fit-content;
+    margin: 24px 0 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.yazi-siralama label {
+    color: var(--metin-rengi);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.yazi-siralama select {
+    min-height: 38px;
+    padding: 7px 34px 7px 12px;
+    border: 1px solid var(--kenarlik-rengi);
+    border-radius: 9px;
+    appearance: none;
+    background-color: var(--kart-arkaplan);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='%237A3E5A' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    color: var(--metin-rengi);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.yazi-siralama select:hover,
+.yazi-siralama select:focus-visible {
+    border-color: var(--ana-renk);
+}
+
+.yazi-siralama select:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--golge);
+}
+
+.yazi-listesi {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 12px 0 64px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+}
+
+.yazi-listesi label[for="arama"] {
+    margin: 0 0 -12px;
+    color: var(--metin-rengi);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.yazi-listesi #arama {
+    min-height: 48px;
+    padding: 11px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px var(--golge);
+}
+
+.yazi-listesi #arama-sonucu,
+.yazi-listesi #yazilar-yukleniyor {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.yazi-karti {
+    min-width: 0;
+    min-height: 250px;
+    padding: 22px;
+    gap: 12px;
+    border: 1px solid var(--kenarlik-rengi);
+    border-radius: 18px;
+    background: var(--kart-arkaplan);
+    box-shadow: 0 8px 22px var(--golge);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.yazi-karti:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px var(--golge);
+}
+
+.yazi-karti .yazi-karti-etiket {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.yazi-karti .yazi-karti-etiket a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 4px 9px;
+    border: 1px solid var(--kenarlik-rengi);
+    border-radius: 999px;
+    background: var(--sayfa-arkaplan);
+    color: var(--ana-renk);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.yazi-karti .yazi-karti-etiket a:hover,
+.yazi-karti .yazi-karti-etiket a:focus-visible {
+    border-color: var(--ana-renk);
+    background: var(--sayfa-arkaplan);
+    color: var(--buton-hover);
+}
+
+.yazi-karti h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.yazi-karti p:not(.etiket) {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.yazi-karti details {
+    color: var(--metin-rengi);
+    font-size: 14px;
+}
+
+.yazi-karti details summary {
+    color: var(--ana-renk);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.yazi-karti > a {
+    margin-top: auto;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: var(--ana-renk);
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.yazi-karti > a:hover,
+.yazi-karti > a:focus-visible {
+    background: var(--buton-hover);
+    color: #FFFFFF;
+}
+
+@media (max-width: 900px) {
+    .yazi-listesi {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .yazi-siralama {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .yazilar-sayfasi {
+        padding: 0 18px;
+    }
+
+    .yazilar-sayfasi .sayfa-baslik {
+        padding: 48px 0 28px;
+    }
+
+    .yazi-filtreleri {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .yazi-filtre-dugmesi {
+        flex: 0 1 auto;
+        padding: 7px 11px;
+        font-size: 13px;
+    }
+
+    .yazi-siralama {
+        margin: 22px 0 8px auto;
+    }
+
+    .yazi-listesi {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding-top: 10px;
+    }
+
+    .yazi-karti {
+        min-height: 0;
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .yazi-filtre-dugmesi,
+    .yazi-karti {
+        transition: none;
+    }
+
+    .yazi-filtre-dugmesi:hover,
+    .yazi-karti:hover {
+        transform: none;
+    }
 }
